@@ -1,6 +1,11 @@
 import './App.css';
+import jesi from "./img/team/1.jpg";
+import rochi from "./img/team/2.jpg";
+import cris from "./img/team/3.jpg";
+import ibm from "./img/logos/ibm.svg";
 
-function asd() {
+
+function loadWatsonAssistantChat() {
   window.watsonAssistantChatOptions = {
     integrationID: "7de74f70-6bf3-40bf-90a9-d2b6f73531b5", // The ID of this integration.
     region: "us-south", // The region your integration is hosted in.
@@ -34,7 +39,7 @@ function App() {
         <link href="css/styles.css" rel="stylesheet" />
       </div>
 
-      {asd}
+      <script onLoad={loadWatsonAssistantChat()}></script>
 
       <body id="page-top">
         {/* 
@@ -52,8 +57,6 @@ function App() {
           </div>
         </header>
 
-
-
         <section className="page-section bg-light" id="team">
           <div className="container">
             <div className="text-center">
@@ -62,33 +65,33 @@ function App() {
             <div className="row">
               <div className="col-lg-4">
                 <div className="team-member">
-                  <img className="mx-auto rounded-circle" src="../assets/img/team/3.jpg" alt="..." />
+                  <img className="mx-auto rounded-circle" src={cris} alt="..." />
                   <h4>Cristian Basanta</h4>
                   <p className="text-muted">Developer</p>
-                  <a className="btn btn-dark btn-social mx-2" href="#!"><i className="fab fa-twitter"></i></a>
+                  {/* <a className="btn btn-dark btn-social mx-2" href="#!"><i className="fab fa-twitter"></i></a>
                   <a className="btn btn-dark btn-social mx-2" href="#!"><i className="fab fa-facebook-f"></i></a>
-                  <a className="btn btn-dark btn-social mx-2" href="#!"><i className="fab fa-linkedin-in"></i></a>
+                  <a className="btn btn-dark btn-social mx-2" href="#!"><i className="fab fa-linkedin-in"></i></a> */}
 
                 </div>
               </div>
               <div className="col-lg-4">
                 <div className="team-member">
-                  <img className="mx-auto rounded-circle" src="../assets/img/team/1.jpg" alt="..." />
+                  <img className="mx-auto rounded-circle" src={rochi} alt="..." />
                   <h4>Rocio Ferreiro Rico</h4>
                   <p className="text-muted">Developer</p>
-                  <a className="btn btn-dark btn-social mx-2" href="#!"><i className="fab fa-twitter"></i></a>
+                  {/* <a className="btn btn-dark btn-social mx-2" href="#!"><i className="fab fa-twitter"></i></a>
                   <a className="btn btn-dark btn-social mx-2" href="#!"><i className="fab fa-facebook-f"></i></a>
-                  <a className="btn btn-dark btn-social mx-2" href="#!"><i className="fab fa-linkedin-in"></i></a>
+                  <a className="btn btn-dark btn-social mx-2" href="#!"><i className="fab fa-linkedin-in"></i></a> */}
                 </div>
               </div>
               <div className="col-lg-4">
                 <div className="team-member">
-                  <img className="mx-auto rounded-circle" src="../assets/img/team/2.jpg" alt="..." />
+                  <img className="mx-auto rounded-circle" src={jesi} alt="..." />
                   <h4>Jesica Lichtensztein</h4>
                   <p className="text-muted">Developer</p>
-                  <a className="btn btn-dark btn-social mx-2" href="#!"><i className="fab fa-twitter"></i></a>
+                  {/* <a className="btn btn-dark btn-social mx-2" href="#!"><i className="fab fa-twitter"></i></a>
                   <a className="btn btn-dark btn-social mx-2" href="#!"><i className="fab fa-facebook-f"></i></a>
-                  <a className="btn btn-dark btn-social mx-2" href="#!"><i className="fab fa-linkedin-in"></i></a>
+                  <a className="btn btn-dark btn-social mx-2" href="#!"><i className="fab fa-linkedin-in"></i></a> */}
                 </div>
               </div>
             </div>
@@ -100,31 +103,31 @@ function App() {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-md-3 col-sm-6 my-3">
-                <a href="#!"><img className="img-fluid img-brand d-block mx-auto" src="../assets/img/logos/ibm.svg" alt="..." /></a>
+                <a href="https://www.ibm.com"><img className="img-fluid img-brand d-block mx-auto" src={ibm} alt="..." /></a>
               </div>
               <div className="col-md-3 col-sm-6 my-3">
-                <a href="#!"><img className="img-fluid img-brand d-block mx-auto" src="../assets/img/logos/ibm.svg" alt="..." /></a>
+                <a href="https://www.ibm.com"><img className=" img-fluid img-brand d-block mx-auto" src={ibm} alt="..." /></a>
               </div>
               <div className="col-md-3 col-sm-6 my-3">
-                <a href="#!"><img className="img-fluid img-brand d-block mx-auto" src="../assets/img/logos/ibm.svg" alt="..." /></a>
+                <a href="https://www.ibm.com"><img className=" img-fluid img-brand d-block mx-auto" src={ibm} alt="..." /></a>
               </div>
               <div className="col-md-3 col-sm-6 my-3">
-                <a href="#!"><img className="img-fluid img-brand d-block mx-auto" src="../assets/img/logos/ibm.svg" alt="..." /></a>
+                <a href="https://www.ibm.com"><img className=" img-fluid img-brand d-block mx-auto" src={ibm} alt="..." /></a>
               </div>
             </div>
-          </div>
-        </div>
+          </div >
+        </div >
 
 
         <footer className="footer py-4">
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-4 text-lg-start">Copyright &copy; Friends Chatbot 2021</div>
-              <div className="col-lg-4 my-3 my-lg-0">
+              {/* <div className="col-lg-4 my-3 my-lg-0">
                 <a className="btn btn-dark btn-social mx-2" href="#!"><i className="fab fa-twitter"></i></a>
                 <a className="btn btn-dark btn-social mx-2" href="#!"><i className="fab fa-facebook-f"></i></a>
                 <a className="btn btn-dark btn-social mx-2" href="#!"><i className="fab fa-linkedin-in"></i></a>
-              </div>
+              </div> */}
               <div className="col-lg-4 text-lg-end">
                 <a className="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
                 <a className="link-dark text-decoration-none" href="#!">Terms of Use</a>
@@ -145,8 +148,8 @@ function App() {
 
 
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-      </body>
-    </div>
+      </body >
+    </div >
   );
 }
 
