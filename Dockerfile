@@ -1,10 +1,7 @@
 FROM node:lts-alpine
-ENV NODE_ENV=production
-WORKDIR /usr/src/app
-COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
-RUN npm install --production --silent && mv node_modules ../
+WORKDIR /friends-chatbot
+ENV PATH="./node_modules/.bin:$PATH"
 COPY . .
-EXPOSE 3000
-RUN chown -R node /usr/src/app
-USER node
+RUN npm install
+RUN npm run build
 CMD ["npm", "start"]
