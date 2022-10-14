@@ -1,7 +1,11 @@
-FROM node:lts-alpine
-WORKDIR /friends-chatbot
+FROM node:lts-alpine AS build-env
+
 ENV PATH="./node_modules/.bin:$PATH"
-COPY . /.
+
+RUN mkdir /app/
+COPY . ./app/
+WORKDIR /app/
+
 RUN npm install
 RUN npm run build
 EXPOSE 8080
